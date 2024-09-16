@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note App Using | HTML,CSS & JAVASCRIPT</title>
+    <!-- Link Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Custom css file here -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="cover">
+
+            <div class="userInputBox">
+                <span class="error" style="opacity: 0;transition: .5 ease-in;"></span>
+                <div class="userInputHeader">
+                    <h6>Add a new Note</h6>
+                    <i class="fa-solid fa-times close" id="close"></i>
+                </div>
+                <div class="userInputs">
+                    <form>
+                        <label for="title">Title</label>
+                        <input class="input" type="text" id="title" autofocus>
+                        <label for="description">Description</label>
+                        <textarea class="input" name="description" id="description"></textarea>
+                        <button class="addBtn" type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="noteBox">
+
+            <!-- Default Add Note Icon to get input from the user => Start-->
+            <div class="notes default">
+                <h2>Keep Notes <i class="fa-solid fa-pen-to-square"></i></h2>
+                <i class="fa-solid fa-plus add" id="addNotes"></i>
+                <span class="defText">Add new note</span>
+            </div>
+            <!-- Default Add Note Icon to get input from the user => End-->
+
+
+<!--             
+            <div class="notes">
+                <h4 class="tilte" id="plan">Plan</h4>
+                <p class="description" id="noteDescription">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
+                    molestias! Quod, in repudiandae, hic,
+                </p>
+                <div class="noteFooter">
+                    <div class="footerCover">
+                        <div class="date">28 Feb,2024</div>
+                        <div class="menu">
+                            <i id="editIcon" class="fa-solid fa-pen-to-square"></i>
+                            <i id="delIcon" class="fa-solid fa-trash"></i>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ -->
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- Footer Section start here -->
+
+
+    <!-- Link JavaScript -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
