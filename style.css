@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amazon Ember",sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: royalblue;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.fixed{
+    position:fixed;
+}
+
+.container .cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.387);
+    z-index: 10;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.container .showTheCover{
+    display: block;
+}
+
+.container .cover .userInputBox{
+    padding: 15px;
+    /* height: 60%; */
+    width: 35%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .cover .userInputBox .userInputHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #00000061;
+    margin: 10px 0;
+}
+
+.container .cover .userInputBox .userInputHeader h6{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container .cover .userInputBox .userInputHeader .close{
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.container .cover .userInputBox .userInputHeader .close:hover{
+    color: red;
+}
+
+.container .cover .userInputBox .userInputs label{
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    margin: 10px 0 ;
+}
+
+.container .cover .userInputBox .userInputs .input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1.5px solid #000;
+    border-radius: 4px;
+}
+
+.container .cover .userInputBox .userInputs #description{
+    height: 180px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: 1.5px solid #000;
+    resize: none;
+    border-radius: 4px;
+}
+
+.container .cover .userInputBox .userInputs .addBtn{
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    color: white;
+    font-size: 22px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.container .cover .userInputBox .userInputs .addBtn:hover{
+    background-color: rgba(65, 105, 225, 0.926);
+}
+
+
+.container .noteBox{
+    width: 100%;
+    /* height: auto; */
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.container .noteBox .notes{
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 5px 04px 5px 5px rgba(0, 0, 0, 0.172);
+    padding: 17px;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    transition: .5s ease;
+}
+
+.container .noteBox .notes:hover{
+    background-color:rgba(255, 255, 255, 0.954);
+}
+
+.container .noteBox .default{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 330px; */
+    gap: 20px;
+}
+
+.container .noteBox .default h2{
+    font-size: 28px;
+    color: royalblue;
+}
+
+.container .noteBox .default .add{
+    height: 80px;
+    width: 80px;
+    border: 2px dashed royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 45px;
+    color: royalblue;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.container .noteBox .default .add:hover{
+    color: white;
+    background-color: royalblue;
+    border: none;
+}
+
+.container .noteBox .default .add:active{
+    background-color: rgba(65, 105, 225, 0.853);
+}
+
+.container .noteBox .defText{
+    color: royalblue;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container .noteBox .notes h4{
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.container .noteBox .notes p{
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.748);
+    padding: 5px 0;
+}
+
+.container .noteBox .notes .noteFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.453);
+    width: 90%;
+    margin: 10px 0;
+    transition: .5 ease;
+}
+
+.container .noteBox .notes .noteFooter .footerCover{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.container .noteBox .notes .noteFooter .footerCover .date{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.container .noteBox .notes .noteFooter .footerCover .menu i{
+    padding: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.container .noteBox .notes .noteFooter .footerCover .menu i:hover{
+    opacity: .8;
+}
+
+.container .noteBox .notes .noteFooter .footerCover .menu i:nth-child(1){
+    color: royalblue;
+}
+
+.container .noteBox .notes .noteFooter .footerCover .menu i:nth-child(2){
+    color: rgb(249, 75, 110);
+}
+
+/* Responsive for mobile devices */
+@media(max-width:767px){
+   
+    .container .noteBox{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .container .cover .userInputBox{
+        width:85%;
+        height: auto;
+    }
+
+    .container .cover{
+        position: fixed;
+    }
+
+   
+
+
+    .container .cover .userInputBox .userInputHeader{
+        margin: 4px 0;
+    }
+
+    .container .cover .userInputBox .userInputHeader h6{
+        font-size: 16px;
+    }
+
+    .container .cover .userInputBox .userInputHeader .close{
+        font-size: 18px;
+    }
+
+    .container .cover .userInputBox .userInputs label{
+        font-size: 17px;
+    }
+
+    .container .cover .userInputBox .userInputs input,textarea{
+        outline-color: royalblue;
+    }
+
+
+
+    
+}
